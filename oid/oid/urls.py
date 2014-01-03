@@ -12,6 +12,11 @@ urlpatterns = patterns('',
 
     url(r'^$', index.views.index),
 
+
+    url(r'^/login-form/', 'index.views.steam_success'),
+    url(r'^/logged-in/', 'index.views.steam_success'),
+    url(r'^/login-error/', 'index.views.steam_success'),
+
     url(r'^admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace='social')),
 )
